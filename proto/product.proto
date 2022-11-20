@@ -5,7 +5,7 @@ package product;
 service ProductService {
     rpc CreateProduct (CreateProductRequest) returns (createProductResponse) {}
     rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
-    rpc DecreaseStock (DecreaseStockRequest) returns (DescreaseStockResponse) {}
+    rpc DecreaseStock (DecreaseStockRequest) returns (DecreaseStockResponse) {}
 }
 
 message CreateProductRequest {
@@ -46,7 +46,7 @@ message DecreaseStockRequest {
     repeated string error = 2;
 }
 
-message DescreaseStockResponse {
+message DecreaseStockResponse {
     int32 status = 1;
     repeated string error = 2;
 }
